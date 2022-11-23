@@ -1,0 +1,2 @@
+/home/zyy/workspace/sylar/CMakeFiles/sylar.dir
+/home/zyy/workspace/sylar/CMakeFiles/test.dir
