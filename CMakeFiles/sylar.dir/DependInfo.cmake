@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zyy/workspace/sylar/sylar/config.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/config.cpp.o"
   "/home/zyy/workspace/sylar/sylar/log.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/log.cpp.o"
   "/home/zyy/workspace/sylar/sylar/util.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/util.cpp.o"
   )
@@ -15,6 +16,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "."
+  "/apps/sylar/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -46,6 +46,14 @@
         "typeinfo": "cpp",
         "map": "cpp",
         "cinttypes": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "unordered_set": "cpp",
+        "strstream": "cpp",
+        "complex": "cpp",
+        "ctime": "cpp",
+        "set": "cpp",
+        "iomanip": "cpp",
+        "cfenv": "cpp",
+        "valarray": "cpp"
     }
 }

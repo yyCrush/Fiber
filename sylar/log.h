@@ -1,6 +1,6 @@
 #ifndef __SYLAR_LOG_H__
 #define __SYLAR_LOG_H__
-
+#include </home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h>
 #include <string>
 #include <memory>
 #include <list>
@@ -13,7 +13,7 @@
 #include "singleton.h"
 // #include <stdint.h>
 
-#define SYLAR_LOG_LEVEL(loger,level) \
+#define SYLAR_LOG_LEVEL(logger,level) \
     if(logger->getLevel() <= level) \
         sylar::LogEventWrap(sylar::LogEvent::ptr(new sylar::LogEvent(logger, level, \
         __FILE__,__LINE__, 0, sylar::GetThreadId(), sylar::GetFiberId(), time(0)))).getSS()
@@ -43,6 +43,7 @@
 namespace sylar{
 
 class Logger;
+
 
 class LogLevel {
 public:
