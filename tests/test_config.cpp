@@ -35,7 +35,7 @@ sylar::ConfigVar<std::map<std::string, int>>::ptr g_str_int_map_value_config = s
 
 void test_yaml() {
 
-    YAML::Node root = YAML::LoadFile("/home/zyy/workspace/sylar/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/home/zyy/workspace/sylar/bin/conf/test.yml");
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root ;
     print_yaml(root,0);
 }
@@ -95,7 +95,7 @@ public:
         return ss.str();
     }
 
-    bool operator==(const Person& oth) const {
+    bool operator==(const Person& oth) const { //这里函数必须是const,因为const对象只能调用const函数
         return m_name == oth.m_name
             && m_age == oth.m_age
             && m_sex == oth.m_sex;
@@ -151,21 +151,41 @@ void test_class() {
 }
     
     // XX_PM(g_person_map,"class.map before");
-    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << "-" <<g_person->toString();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
+    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << "-" <<g_person->toString();
+    g_person->addListener(10, [](const Person& old_value, const Person& new_value){
+        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "oldValue: " << old_value.toString() << " new_value" << new_value.toString();
+    });
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("/home/zyy/workspace/sylar/bin/conf/log.yml");
+
+    YAML::Node root = YAML::LoadFile("/home/zyy/workspace/sylar/bin/conf/test.yml");
     sylar::Config::LoadFromYaml(root);
 
-    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << "-" <<g_person->toString();
+    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << "-" <<g_person->toString();
     // XX_PM(g_person_map,"class.map after");
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
+    // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
 }
 
+void test_log() {
+    static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    std::cout << "=============" << std::endl;
+    YAML::Node root  = YAML::LoadFile("/home/zyy/workspace/sylar/bin/conf/log.yml");
+    sylar::Config::LoadFromYaml(root);
+    std::cout << "=============" << std::endl;
+    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    std::cout << "=============" << std::endl;
+    std::cout << root << std::endl;
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    system_log->setFormatter("%d - %m%n");
+    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+}
 
 int main (int argc, char** argv) {
-
-    test_class();
+    // test_yaml();
+    test_log();
     return 0;
 }

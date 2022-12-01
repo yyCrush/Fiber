@@ -4,8 +4,8 @@ namespace sylar {
 
 ConfigVarBase::ptr Config::LookupBase(const std::string& name) {
     // RWMutexType::ReadLock lock(GetMutex());
-    auto it = s_datas.find(name);
-    return it == s_datas.end() ? nullptr : it->second;
+    auto it = GetDatas().find(name);
+    return it == GetDatas().end() ? nullptr : it->second;
 }
 
 static void ListAllMember(const std::string& prefix,const YAML::Node& node,

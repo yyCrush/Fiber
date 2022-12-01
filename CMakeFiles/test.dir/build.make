@@ -88,6 +88,7 @@ test_EXTERNAL_OBJECTS =
 bin/test: CMakeFiles/test.dir/tests/test.cpp.o
 bin/test: CMakeFiles/test.dir/build.make
 bin/test: lib/libsylar.so
+bin/test: lib/libsylar.so
 bin/test: /usr/local/lib64/libyaml-cpp.a
 bin/test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/test"

@@ -6,6 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/zyy/workspace/sylar/sylar/config.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/config.cpp.o"
   "/home/zyy/workspace/sylar/sylar/log.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/log.cpp.o"
+  "/home/zyy/workspace/sylar/sylar/thread.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/thread.cpp.o"
   "/home/zyy/workspace/sylar/sylar/util.cpp" "/home/zyy/workspace/sylar/CMakeFiles/sylar.dir/sylar/util.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
