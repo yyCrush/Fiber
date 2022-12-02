@@ -22,7 +22,7 @@
 #include <unordered_set>
 #include <functional>
 
-// #include "thread.h"
+#include "thread.h"
 #include "log.h"
 #include "util.h"
 
@@ -276,10 +276,9 @@ public:
 template<class T, class FromStr = LexicalCast<std::string, T>, class ToStr = LexicalCast<T, std::string> >
 class ConfigVar : public ConfigVarBase {
 public:
-    // typedef RWMutex RWMutexType;
+    typedef RWMutex RWMutexType;
     typedef std::shared_ptr<ConfigVar> ptr;
     typedef std::function<void (const T& old_value, const T& new_value)> on_change_cb;
-
     /**
      * @brief 通过参数名,参数值,描述构造ConfigVar
      * @param[in] name 参数名称有效字符为[0-9a-z_.]
@@ -292,7 +291,6 @@ public:
         :ConfigVarBase(name, description)
         ,m_val(default_value) {
     }
-
     /**
      * @brief 将参数值转换成YAMLde String
      * @exception 当转换失败抛出异常
@@ -300,7 +298,7 @@ public:
     std::string toString() override {
         try {
             // return boost::lexical_cast<std::string>(m_val);
-            // RWMutexType::ReadLock lock(m_mutex);
+            RWMutexType::ReadLock lock(m_mutex);
             return ToStr()(m_val);
         } catch (std::exception& e) {
             SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) << "ConfigVar::toString exception "
@@ -309,7 +307,6 @@ public:
         }
         return "";
     }
-
     /**
      * @brief 从YAML String 转成参数的值
      * @exception 当转换失败抛出异常
@@ -324,12 +321,11 @@ public:
         }
         return false;
     }
-
     /**
      * @brief 获取当前参数的值
      */
     const T getValue() {
-        // RWMutexType::ReadLock lock(m_mutex);
+        RWMutexType::ReadLock lock(m_mutex);
         return m_val;
     }
 
@@ -338,16 +334,16 @@ public:
      * @details 如果参数的值有发生变化,则通知对应的注册回调函数
      */
     void setValue(const T& v) {
-        // {
-        //     RWMutexType::ReadLock lock(m_mutex);
+        {
+            RWMutexType::ReadLock lock(m_mutex);
             if(v == m_val) {
                 return;
             }
             for(auto& i : m_cbs) {
                 i.second(m_val, v);
             }
-        // }
-        // RWMutexType::WriteLock lock(m_mutex);
+        }
+        RWMutexType::WriteLock lock(m_mutex);
         m_val = v;
     }
 
@@ -359,11 +355,11 @@ public:
      * @brief 添加变化回调函数
      * @return 返回该回调函数对应的唯一id,用于删除回调
      */
-    uint64_t addListener(uint64_t key, on_change_cb cb) {
-        // static uint64_t s_fun_id = 0;
-        // RWMutexType::WriteLock lock(m_mutex);
-        // ++s_fun_id;
-        m_cbs[key] = cb;
+    uint64_t addListener( on_change_cb cb) {
+        static uint64_t s_fun_id = 0; //函数中的今天变量，多次调用函数，但也只定义一次
+        RWMutexType::WriteLock lock(m_mutex);
+        ++s_fun_id;
+        m_cbs[s_fun_id] = cb;
         return 0;
     }
 
@@ -372,7 +368,7 @@ public:
      * @param[in] key 回调函数的唯一id
      */
     void delListener(uint64_t key) {
-        // RWMutexType::WriteLock lock(m_mutex);
+        RWMutexType::WriteLock lock(m_mutex);
         m_cbs.erase(key);
     }
     /**
@@ -381,7 +377,7 @@ public:
      * @return 如果存在返回对应的回调函数,否则返回nullptr
      */
     on_change_cb getListener(uint64_t key) {
-        // RWMutexType::ReadLock lock(m_mutex);
+        RWMutexType::ReadLock lock(m_mutex);
         auto it = m_cbs.find(key);
         return it == m_cbs.end() ? nullptr : it->second;
     }
@@ -389,11 +385,11 @@ public:
      * @brief 清理所有的回调函数
      */
     void clearListener() {
-        // RWMutexType::WriteLock lock(m_mutex);
+        RWMutexType::WriteLock lock(m_mutex);
         m_cbs.clear();
     }
 private:
-    // RWMutexType m_mutex;
+    RWMutexType m_mutex;
     T m_val;
     //变更回调函数组, uint64_t key,要求唯一，一般可以用hash
     std::map<uint64_t, on_change_cb> m_cbs;
@@ -406,7 +402,7 @@ private:
 class Config {
 public:
     typedef std::map<std::string, ConfigVarBase::ptr> ConfigVarMap;
-    // typedef RWMutex RWMutexType;
+    typedef RWMutex RWMutexType;
 
     /**
      * @brief 获取/创建对应参数名的配置参数
@@ -422,8 +418,8 @@ public:
     static typename ConfigVar<T>::ptr Lookup(const std::string& name,
             const T& default_value, const std::string& description = "") {
 
-        auto tmp = Lookup<T>(name);
-        // RWMutexType::WriteLock lock(GetMutex());
+        // auto tmp = Lookup<T>(name);
+        RWMutexType::WriteLock lock(GetMutex());
         auto it = GetDatas().find(name);
         // if(it != GetDatas().end()) {
         //     auto tmp = std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
@@ -458,7 +454,7 @@ public:
     template<class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name) {
         // auto it = s_datas.find(name);
-        // RWMutexType::ReadLock lock(GetMutex());
+        RWMutexType::ReadLock lock(GetMutex());
         auto it = GetDatas().find(name);
         if(it == GetDatas().end()) {
             return nullptr;
@@ -487,7 +483,7 @@ public:
      * @brief 遍历配置模块里面所有配置项
      * @param[in] cb 配置项回调函数
      */
-    // static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
+    static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
 private:
 
     /**
@@ -501,10 +497,12 @@ private:
     /**
      * @brief 配置项的RWMutex
      */
-    // static RWMutexType& GetMutex() {
-    //     static RWMutexType s_mutex;
-    //     return s_mutex;
-    // }
+    //因为这个类基本上是创建全局变量，全局变量初始化没有严格的顺序，如果是使用静态成员的s_mutex
+    //如果初始化的顺序要比执行s_mutex的方法要晚，会出现未定义
+    static RWMutexType& GetMutex() {
+        static RWMutexType s_mutex;
+        return s_mutex;
+    }
     // static ConfigVarMap s_datas;
 };
 // Config::ConfigVarMap Config::s_datas;

@@ -11,6 +11,7 @@
 #include <map>
 #include "util.h"
 #include "singleton.h"
+#include "thread.h"
 // #include <stdint.h>
 
 #define SYLAR_LOG_LEVEL(logger,level) \
@@ -146,7 +147,9 @@ private:
 class LogAppender {
 friend class Logger;
 public:
+
     typedef std::shared_ptr<LogAppender> ptr;
+    typedef Spinlock MutexType;
     virtual ~LogAppender(){}
 
     virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0 ;
@@ -155,12 +158,14 @@ public:
     virtual std::string toYamlString() = 0;
 
     void setFormatter (LogFormatter::ptr val);
-    LogFormatter::ptr getFormatter() const { return m_formatter;}
+    LogFormatter::ptr getFormatter();
 protected:
     LogLevel::Level m_level = LogLevel::DEBUG;
     bool m_hasFormatter = false;
+    MutexType m_mutex;
     LogFormatter::ptr m_formatter;
 };
+
 
 class LoggerManager;
 
@@ -170,7 +175,7 @@ class Logger : public std::enable_shared_from_this<Logger> {
 friend class LoggerManager;
 public:
     typedef std::shared_ptr<Logger> ptr;
-
+    typedef Spinlock MutexType;
     Logger (const std::string& name = "root");
     void log (LogLevel::Level level, const LogEvent::ptr event);
 
@@ -197,6 +202,7 @@ public:
 private:
     std::string m_name;                 //默认 root
     LogLevel::Level m_level;            //默认   m_level(LogLevel::DEBUG)
+    MutexType m_mutex;
     std::list<LogAppender::ptr> m_appenders;
     LogFormatter::ptr m_formatter;      //在logger初始化时赋值  new LogFormatter("%d [%p] <%f:%l>    %m %n") Init初始化 std::vector<FormatItem::ptr> m_items;
     Logger::ptr m_root;
@@ -223,29 +229,19 @@ public:
 private:
     std::string m_filename;
     std::ofstream m_filestream;
+    uint64_t m_lastTime;
 };
 
 class LoggerManager {
 public:
-    /**
-     * @brief 构造函数
-     */
+    typedef Spinlock MutexType;
     LoggerManager();
-    /**
-     * @brief 获取日志器
-     * @param[in] name 日志器名称
-     */
     Logger::ptr getLogger(const std::string& name);
-    /**
-     * @brief 返回主日志器
-     */
     Logger::ptr getRoot() const { return m_root;}
-    /**
-     * @brief 将所有的日志器配置转成YAML String
-     */
     std::string toYamlString();
     void init();
 private:
+    MutexType m_mutex;
     /// 日志器容器
     std::map<std::string, Logger::ptr> m_loggers;
     Logger::ptr m_root;

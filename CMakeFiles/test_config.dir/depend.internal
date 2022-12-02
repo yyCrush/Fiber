@@ -6,5 +6,6 @@ CMakeFiles/test_config.dir/tests/test_config.cpp.o
  /home/zyy/workspace/sylar/sylar/config.h
  /home/zyy/workspace/sylar/sylar/log.h
  /home/zyy/workspace/sylar/sylar/singleton.h
+ /home/zyy/workspace/sylar/sylar/thread.h
  /home/zyy/workspace/sylar/sylar/util.h
  /home/zyy/workspace/sylar/tests/test_config.cpp

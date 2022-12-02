@@ -55,9 +55,21 @@ util.h
 /home/zyy/workspace/sylar/sylar/util.h
 singleton.h
 /home/zyy/workspace/sylar/sylar/singleton.h
+thread.h
+/home/zyy/workspace/sylar/sylar/thread.h
 
 /home/zyy/workspace/sylar/sylar/singleton.h
 memory
+-
+
+/home/zyy/workspace/sylar/sylar/thread.h
+thread
+-
+functional
+-
+semaphore.h
+-
+atomic
 -
 
 /home/zyy/workspace/sylar/sylar/util.h

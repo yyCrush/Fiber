@@ -1,9 +1,10 @@
-#ifndef __SYLAR_THREAH__
+#ifndef __SYLAR_THREAD_H__
 #define __SYLAR_THREAD_H__
 
 #include <thread>
 #include <functional>
 #include <semaphore.h>
+#include <atomic>
 // #include "mutex.h"
 //一般线程写少读多，但是std::thread不分读写锁
 namespace sylar {
@@ -71,6 +72,16 @@ public:
 private:
     /// mutex
     pthread_mutex_t m_mutex;
+};
+
+class  NullMutex {
+public:
+
+    typedef ScopedLockImpl<NullMutex> Lock;
+    NullMutex() {}
+    ~NullMutex() {}
+    void lock() {}
+    void unlock() {}
 };
 
 //局部读锁模板
@@ -161,6 +172,55 @@ public:
 private:
     /// 读写锁
     pthread_rwlock_t m_lock;
+};
+
+class NullRWMutex {
+public:
+    /// 局部读锁
+    typedef ReadScopedLockImpl<NullMutex> ReadLock;
+    /// 局部写锁
+    typedef WriteScopedLockImpl<NullMutex> WriteLock;
+    NullRWMutex() {}
+    ~NullRWMutex() {}
+    void rdlock() {}
+    void wrlock() {}
+    void unlock() {}
+};
+
+class Spinlock {
+public:
+    typedef ScopedLockImpl<Spinlock> Lock;
+    Spinlock() {
+        pthread_spin_init (&m_mutex, 0);
+    }
+    ~Spinlock() {
+        pthread_spin_destroy(&m_mutex);
+    }
+    void lock() {
+        pthread_spin_lock(&m_mutex);
+    }
+    void unlock() {
+        pthread_spin_unlock(&m_mutex);
+    }
+
+private:
+    pthread_spinlock_t m_mutex;
+};
+
+class CASLock {
+public:
+    CASLock() {
+
+    }
+    ~CASLock () {
+
+    }
+    void lock() {
+
+    }
+    void unlock() {
+
+    }
 };
 
 

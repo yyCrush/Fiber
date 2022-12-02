@@ -61,6 +61,8 @@ unordered_set
 -
 functional
 -
+thread.h
+sylar/thread.h
 log.h
 sylar/log.h
 util.h
@@ -89,6 +91,8 @@ util.h
 sylar/util.h
 singleton.h
 sylar/singleton.h
+thread.h
+sylar/thread.h
 
 sylar/singleton.h
 memory
@@ -112,6 +116,8 @@ thread
 functional
 -
 semaphore.h
+-
+atomic
 -
 
 sylar/util.h

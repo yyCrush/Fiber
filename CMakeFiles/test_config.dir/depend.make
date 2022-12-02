@@ -5,6 +5,7 @@ CMakeFiles/test_config.dir/tests/test_config.cpp.o: /home/zyy/package/yaml-cpp-m
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: sylar/config.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: sylar/log.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: sylar/singleton.h
+CMakeFiles/test_config.dir/tests/test_config.cpp.o: sylar/thread.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: sylar/util.h
 CMakeFiles/test_config.dir/tests/test_config.cpp.o: tests/test_config.cpp
 

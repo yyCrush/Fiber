@@ -152,7 +152,7 @@ void test_class() {
     
     // XX_PM(g_person_map,"class.map before");
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << "-" <<g_person->toString();
-    g_person->addListener(10, [](const Person& old_value, const Person& new_value){
+    g_person->addListener([](const Person& old_value, const Person& new_value){
         SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "oldValue: " << old_value.toString() << " new_value" << new_value.toString();
     });
     // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
@@ -186,6 +186,12 @@ void test_log() {
 
 int main (int argc, char** argv) {
     // test_yaml();
-    test_log();
+    // sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+    sylar::Config::Visit([](sylar::ConfigVarBase::ptr var) {
+        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) <<"name=" << var->getName()
+        << "description=" << var->getDescription()
+        << "value=" << var->toString();
+    });
+    // test_log();
     return 0;
 }
