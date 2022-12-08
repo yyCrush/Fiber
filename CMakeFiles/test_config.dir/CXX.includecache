@@ -115,6 +115,10 @@ stdio.h
 -
 stdint.h
 -
+vector
+-
+string
+-
 
 /home/zyy/workspace/sylar/tests/test_config.cpp
 ../sylar/config.h

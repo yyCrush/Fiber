@@ -13,6 +13,7 @@ link_directories(/usr/local/lib64)
 
 set(LIB_SRC
 sylar/log.cpp
+sylar/fiber.cpp
 sylar/util.cpp
 sylar/config.cpp
 sylar/thread.cpp
@@ -44,6 +45,16 @@ add_executable(test_thread tests/test_thread.cpp)
 add_dependencies(test_thread sylar)
 # force_redefine_file_macro_for_source(test_config)
 target_link_libraries(test_thread sylar ${LIB_LIB})
+
+add_executable(test_util tests/test_util.cpp)
+add_dependencies(test_util sylar)
+# force_redefine_file_macro_for_source(test_config)
+target_link_libraries(test_util sylar ${LIB_LIB})
+
+add_executable(test_fiber tests/test_fiber.cpp)
+add_dependencies(test_fiber sylar)
+# force_redefine_file_macro_for_source(test_config)
+target_link_libraries(test_fiber sylar ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

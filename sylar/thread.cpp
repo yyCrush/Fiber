@@ -3,7 +3,7 @@
 #include "util.h"
 
 namespace sylar {
-
+// 当前运行的线程和线程名
 static thread_local Thread* t_thread = nullptr;
 static thread_local std::string t_thread_name = "UNKNOW";
 

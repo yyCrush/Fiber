@@ -5,7 +5,9 @@ CMakeFiles/test_thread.dir/tests/test_thread.cpp.o
  /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
  /home/zyy/workspace/sylar/tests/test_thread.cpp
  sylar/config.h
+ sylar/fiber.h
  sylar/log.h
+ sylar/macro.h
  sylar/singleton.h
  sylar/sylar.h
  sylar/thread.h
