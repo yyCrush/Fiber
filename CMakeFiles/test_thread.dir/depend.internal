@@ -8,6 +8,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cpp.o
  sylar/fiber.h
  sylar/log.h
  sylar/macro.h
+ sylar/scheduler.h
  sylar/singleton.h
  sylar/sylar.h
  sylar/thread.h

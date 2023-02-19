@@ -43,6 +43,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test.dir/DependInfo.cmake"
   "CMakeFiles/test_config.dir/DependInfo.cmake"
   "CMakeFiles/test_fiber.dir/DependInfo.cmake"
+  "CMakeFiles/test_scheduler.dir/DependInfo.cmake"
   "CMakeFiles/test_thread.dir/DependInfo.cmake"
   "CMakeFiles/test_util.dir/DependInfo.cmake"
   )

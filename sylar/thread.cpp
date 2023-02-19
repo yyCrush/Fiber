@@ -61,7 +61,7 @@ Thread::Thread(std::function<void()> cb, const std::string& name)
             << " name=" << name;
         throw std::logic_error("pthread_create error");
     }
-    //为了使线程创建成功返回前，线程是跑起来了的
+    //为了使Thread创建成功返回前，线程是跑起来了的
     m_semaphore.wait();
     // std::cout << m_name << "wait" << std::endl;
 }
@@ -93,6 +93,7 @@ void* Thread::run(void* arg) {
 
     std::function<void()> cb;
     cb.swap(thread->m_cb);
+    //保证在执行Thread创建好之前，m_id已经初始化
     thread->m_semaphore.notify();
     // std::cout << thread->m_name << "notify" << std::endl;
 

@@ -32,7 +32,7 @@ yaml-cpp/node/parse.h
 yaml-cpp/node/emit.h
 /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml-cpp/node/emit.h
 
-/home/zyy/workspace/sylar/tests/test_fiber.cpp
+/home/zyy/workspace/sylar/tests/test_scheduler.cpp
 sylar/sylar.h
 /home/zyy/workspace/sylar/tests/sylar/sylar.h
 

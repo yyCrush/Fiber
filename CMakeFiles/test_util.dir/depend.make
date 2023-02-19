@@ -7,6 +7,7 @@ CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/config.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/log.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/sylar.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/thread.h

@@ -27,6 +27,16 @@ CMakeFiles/sylar.dir/sylar/log.cpp.o: sylar/singleton.h
 CMakeFiles/sylar.dir/sylar/log.cpp.o: sylar/thread.h
 CMakeFiles/sylar.dir/sylar/log.cpp.o: sylar/util.h
 
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/fiber.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/log.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/macro.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/scheduler.cpp
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/scheduler.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/singleton.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/thread.h
+CMakeFiles/sylar.dir/sylar/scheduler.cpp.o: sylar/util.h
+
 CMakeFiles/sylar.dir/sylar/thread.cpp.o: /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/sylar.dir/sylar/thread.cpp.o: sylar/log.h
 CMakeFiles/sylar.dir/sylar/thread.cpp.o: sylar/singleton.h

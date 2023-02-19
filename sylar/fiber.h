@@ -21,14 +21,18 @@ public:
 private:
     Fiber();
 public:
-    Fiber(std::function<void()> cb, size_t stacksize = 0);
+    Fiber(std::function<void()> cb, size_t stacksize = 0, bool use_caller = false);
     ~Fiber();
     void reset(std::function<void()> cb);
     void swapIn();
     void swapOut();
 
+    void call();
+    void back();
     uint64_t getId() const { return m_id;}
+    State getState() const { return m_state;}
 public:
+    State m_state = INIT;
     static void SetThis(Fiber* f);
     static Fiber::ptr GetThis();
     static void YieldToReady();
@@ -58,7 +62,6 @@ private:
     /// 协程运行栈大小
     uint32_t m_stacksize = 0;
     /// 协程状态
-    State m_state = INIT;
     /// 协程上下文
     ucontext_t m_ctx;
     /// 协程运行栈指针
