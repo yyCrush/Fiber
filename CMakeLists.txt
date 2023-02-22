@@ -18,6 +18,7 @@ sylar/util.cpp
 sylar/config.cpp
 sylar/thread.cpp
 sylar/scheduler.cpp
+sylar/iomanager.cpp
 )
 
 find_library(YAMLCPP yaml-cpp)
@@ -61,6 +62,11 @@ add_executable(test_scheduler tests/test_scheduler.cpp)
 add_dependencies(test_scheduler sylar)
 # force_redefine_file_macro_for_source(test_config)
 target_link_libraries(test_scheduler sylar ${LIB_LIB})
+
+add_executable(test_iomanager tests/test_iomanager.cpp)
+add_dependencies(test_iomanager sylar)
+# force_redefine_file_macro_for_source(test_config)
+target_link_libraries(test_iomanager sylar ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

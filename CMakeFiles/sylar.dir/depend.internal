@@ -19,6 +19,17 @@ CMakeFiles/sylar.dir/sylar/fiber.cpp.o
  /home/zyy/workspace/sylar/sylar/singleton.h
  /home/zyy/workspace/sylar/sylar/thread.h
  /home/zyy/workspace/sylar/sylar/util.h
+CMakeFiles/sylar.dir/sylar/iomanager.cpp.o
+ /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
+ /home/zyy/workspace/sylar/sylar/fiber.h
+ /home/zyy/workspace/sylar/sylar/iomanager.cpp
+ /home/zyy/workspace/sylar/sylar/iomanager.h
+ /home/zyy/workspace/sylar/sylar/log.h
+ /home/zyy/workspace/sylar/sylar/macro.h
+ /home/zyy/workspace/sylar/sylar/scheduler.h
+ /home/zyy/workspace/sylar/sylar/singleton.h
+ /home/zyy/workspace/sylar/sylar/thread.h
+ /home/zyy/workspace/sylar/sylar/util.h
 CMakeFiles/sylar.dir/sylar/log.cpp.o
  /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
  /home/zyy/workspace/sylar/sylar/config.h

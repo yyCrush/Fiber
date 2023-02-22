@@ -123,6 +123,8 @@ fiber.h
 sylar/fiber.h
 thread.h
 sylar/thread.h
+log.h
+sylar/log.h
 
 sylar/singleton.h
 memory

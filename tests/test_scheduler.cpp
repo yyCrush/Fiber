@@ -19,7 +19,6 @@ int main(int argc, char** argv) {
     sleep(2);
     SYLAR_LOG_INFO(g_logger) << "schedule";
     sc.schedule(&test_fiber);
-    SYLAR_LOG_INFO(g_logger) << "----------";
     sc.stop();
     SYLAR_LOG_INFO(g_logger) << "over";
     return 0;
