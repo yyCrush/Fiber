@@ -3,13 +3,14 @@
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: tests/test_scheduler.cpp
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/config.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/fiber.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/log.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/macro.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/scheduler.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/singleton.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/sylar.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/thread.h
-CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: sylar/util.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/config.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/fiber.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/log.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/macro.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/noncopyable.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/scheduler.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/singleton.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/myfiber.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/thread.h
+CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: myfiber/util.h
 

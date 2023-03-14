@@ -45,10 +45,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zyy/workspace/sylar
+CMAKE_SOURCE_DIR = /home/zyy/workspace/myfiber
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zyy/workspace/sylar
+CMAKE_BINARY_DIR = /home/zyy/workspace/myfiber
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -75,9 +75,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyy/workspace/sylar/CMakeFiles /home/zyy/workspace/sylar/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyy/workspace/myfiber/CMakeFiles /home/zyy/workspace/myfiber/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyy/workspace/sylar/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyy/workspace/myfiber/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -105,17 +105,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sylar
+# Target rules for targets named myfiber
 
 # Build rule for target.
-sylar: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sylar
-.PHONY : sylar
+myfiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myfiber
+.PHONY : myfiber
 
 # fast build rule for target.
-sylar/fast:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
-.PHONY : sylar/fast
+myfiber/fast:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/build
+.PHONY : myfiber/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -129,6 +129,19 @@ test: cmake_check_build_system
 test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
 
 #=============================================================================
 # Target rules for targets named test_config
@@ -157,6 +170,32 @@ test_fiber/fast:
 .PHONY : test_fiber/fast
 
 #=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_http_parser
+
+# Build rule for target.
+test_http_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
+
+# fast build rule for target.
+test_http_parser/fast:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
+
+#=============================================================================
 # Target rules for targets named test_iomanager
 
 # Build rule for target.
@@ -181,6 +220,32 @@ test_scheduler: cmake_check_build_system
 test_scheduler/fast:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
 .PHONY : test_scheduler/fast
+
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
+# Target rules for targets named test_tcp_server
+
+# Build rule for target.
+test_tcp_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tcp_server
+.PHONY : test_tcp_server
+
+# fast build rule for target.
+test_tcp_server/fast:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/build
+.PHONY : test_tcp_server/fast
 
 #=============================================================================
 # Target rules for targets named test_thread
@@ -208,173 +273,413 @@ test_util/fast:
 	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
 .PHONY : test_util/fast
 
-sylar/config.o: sylar/config.cpp.o
-.PHONY : sylar/config.o
+myfiber/address.o: myfiber/address.cpp.o
+.PHONY : myfiber/address.o
 
 # target to build an object file
-sylar/config.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cpp.o
-.PHONY : sylar/config.cpp.o
+myfiber/address.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/address.cpp.o
+.PHONY : myfiber/address.cpp.o
 
-sylar/config.i: sylar/config.cpp.i
-.PHONY : sylar/config.i
+myfiber/address.i: myfiber/address.cpp.i
+.PHONY : myfiber/address.i
 
 # target to preprocess a source file
-sylar/config.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cpp.i
-.PHONY : sylar/config.cpp.i
+myfiber/address.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/address.cpp.i
+.PHONY : myfiber/address.cpp.i
 
-sylar/config.s: sylar/config.cpp.s
-.PHONY : sylar/config.s
+myfiber/address.s: myfiber/address.cpp.s
+.PHONY : myfiber/address.s
 
 # target to generate assembly for a file
-sylar/config.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cpp.s
-.PHONY : sylar/config.cpp.s
+myfiber/address.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/address.cpp.s
+.PHONY : myfiber/address.cpp.s
 
-sylar/fiber.o: sylar/fiber.cpp.o
-.PHONY : sylar/fiber.o
+myfiber/config.o: myfiber/config.cpp.o
+.PHONY : myfiber/config.o
 
 # target to build an object file
-sylar/fiber.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cpp.o
-.PHONY : sylar/fiber.cpp.o
+myfiber/config.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/config.cpp.o
+.PHONY : myfiber/config.cpp.o
 
-sylar/fiber.i: sylar/fiber.cpp.i
-.PHONY : sylar/fiber.i
+myfiber/config.i: myfiber/config.cpp.i
+.PHONY : myfiber/config.i
 
 # target to preprocess a source file
-sylar/fiber.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cpp.i
-.PHONY : sylar/fiber.cpp.i
+myfiber/config.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/config.cpp.i
+.PHONY : myfiber/config.cpp.i
 
-sylar/fiber.s: sylar/fiber.cpp.s
-.PHONY : sylar/fiber.s
+myfiber/config.s: myfiber/config.cpp.s
+.PHONY : myfiber/config.s
 
 # target to generate assembly for a file
-sylar/fiber.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cpp.s
-.PHONY : sylar/fiber.cpp.s
+myfiber/config.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/config.cpp.s
+.PHONY : myfiber/config.cpp.s
 
-sylar/iomanager.o: sylar/iomanager.cpp.o
-.PHONY : sylar/iomanager.o
+myfiber/fd_manager.o: myfiber/fd_manager.cpp.o
+.PHONY : myfiber/fd_manager.o
 
 # target to build an object file
-sylar/iomanager.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cpp.o
-.PHONY : sylar/iomanager.cpp.o
+myfiber/fd_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fd_manager.cpp.o
+.PHONY : myfiber/fd_manager.cpp.o
 
-sylar/iomanager.i: sylar/iomanager.cpp.i
-.PHONY : sylar/iomanager.i
+myfiber/fd_manager.i: myfiber/fd_manager.cpp.i
+.PHONY : myfiber/fd_manager.i
 
 # target to preprocess a source file
-sylar/iomanager.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cpp.i
-.PHONY : sylar/iomanager.cpp.i
+myfiber/fd_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fd_manager.cpp.i
+.PHONY : myfiber/fd_manager.cpp.i
 
-sylar/iomanager.s: sylar/iomanager.cpp.s
-.PHONY : sylar/iomanager.s
+myfiber/fd_manager.s: myfiber/fd_manager.cpp.s
+.PHONY : myfiber/fd_manager.s
 
 # target to generate assembly for a file
-sylar/iomanager.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cpp.s
-.PHONY : sylar/iomanager.cpp.s
+myfiber/fd_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fd_manager.cpp.s
+.PHONY : myfiber/fd_manager.cpp.s
 
-sylar/log.o: sylar/log.cpp.o
-.PHONY : sylar/log.o
+myfiber/fiber.o: myfiber/fiber.cpp.o
+.PHONY : myfiber/fiber.o
 
 # target to build an object file
-sylar/log.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cpp.o
-.PHONY : sylar/log.cpp.o
+myfiber/fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fiber.cpp.o
+.PHONY : myfiber/fiber.cpp.o
 
-sylar/log.i: sylar/log.cpp.i
-.PHONY : sylar/log.i
+myfiber/fiber.i: myfiber/fiber.cpp.i
+.PHONY : myfiber/fiber.i
 
 # target to preprocess a source file
-sylar/log.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cpp.i
-.PHONY : sylar/log.cpp.i
+myfiber/fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fiber.cpp.i
+.PHONY : myfiber/fiber.cpp.i
 
-sylar/log.s: sylar/log.cpp.s
-.PHONY : sylar/log.s
+myfiber/fiber.s: myfiber/fiber.cpp.s
+.PHONY : myfiber/fiber.s
 
 # target to generate assembly for a file
-sylar/log.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cpp.s
-.PHONY : sylar/log.cpp.s
+myfiber/fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/fiber.cpp.s
+.PHONY : myfiber/fiber.cpp.s
 
-sylar/scheduler.o: sylar/scheduler.cpp.o
-.PHONY : sylar/scheduler.o
+myfiber/hook.o: myfiber/hook.cpp.o
+.PHONY : myfiber/hook.o
 
 # target to build an object file
-sylar/scheduler.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cpp.o
-.PHONY : sylar/scheduler.cpp.o
+myfiber/hook.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/hook.cpp.o
+.PHONY : myfiber/hook.cpp.o
 
-sylar/scheduler.i: sylar/scheduler.cpp.i
-.PHONY : sylar/scheduler.i
+myfiber/hook.i: myfiber/hook.cpp.i
+.PHONY : myfiber/hook.i
 
 # target to preprocess a source file
-sylar/scheduler.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cpp.i
-.PHONY : sylar/scheduler.cpp.i
+myfiber/hook.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/hook.cpp.i
+.PHONY : myfiber/hook.cpp.i
 
-sylar/scheduler.s: sylar/scheduler.cpp.s
-.PHONY : sylar/scheduler.s
+myfiber/hook.s: myfiber/hook.cpp.s
+.PHONY : myfiber/hook.s
 
 # target to generate assembly for a file
-sylar/scheduler.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cpp.s
-.PHONY : sylar/scheduler.cpp.s
+myfiber/hook.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/hook.cpp.s
+.PHONY : myfiber/hook.cpp.s
 
-sylar/thread.o: sylar/thread.cpp.o
-.PHONY : sylar/thread.o
+myfiber/http/http.o: myfiber/http/http.cpp.o
+.PHONY : myfiber/http/http.o
 
 # target to build an object file
-sylar/thread.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cpp.o
-.PHONY : sylar/thread.cpp.o
+myfiber/http/http.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http.cpp.o
+.PHONY : myfiber/http/http.cpp.o
 
-sylar/thread.i: sylar/thread.cpp.i
-.PHONY : sylar/thread.i
+myfiber/http/http.i: myfiber/http/http.cpp.i
+.PHONY : myfiber/http/http.i
 
 # target to preprocess a source file
-sylar/thread.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cpp.i
-.PHONY : sylar/thread.cpp.i
+myfiber/http/http.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http.cpp.i
+.PHONY : myfiber/http/http.cpp.i
 
-sylar/thread.s: sylar/thread.cpp.s
-.PHONY : sylar/thread.s
+myfiber/http/http.s: myfiber/http/http.cpp.s
+.PHONY : myfiber/http/http.s
 
 # target to generate assembly for a file
-sylar/thread.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cpp.s
-.PHONY : sylar/thread.cpp.s
+myfiber/http/http.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http.cpp.s
+.PHONY : myfiber/http/http.cpp.s
 
-sylar/util.o: sylar/util.cpp.o
-.PHONY : sylar/util.o
+myfiber/http/http11_parser.o: myfiber/http/http11_parser.cpp.o
+.PHONY : myfiber/http/http11_parser.o
 
 # target to build an object file
-sylar/util.cpp.o:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cpp.o
-.PHONY : sylar/util.cpp.o
+myfiber/http/http11_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http11_parser.cpp.o
+.PHONY : myfiber/http/http11_parser.cpp.o
 
-sylar/util.i: sylar/util.cpp.i
-.PHONY : sylar/util.i
+myfiber/http/http11_parser.i: myfiber/http/http11_parser.cpp.i
+.PHONY : myfiber/http/http11_parser.i
 
 # target to preprocess a source file
-sylar/util.cpp.i:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cpp.i
-.PHONY : sylar/util.cpp.i
+myfiber/http/http11_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http11_parser.cpp.i
+.PHONY : myfiber/http/http11_parser.cpp.i
 
-sylar/util.s: sylar/util.cpp.s
-.PHONY : sylar/util.s
+myfiber/http/http11_parser.s: myfiber/http/http11_parser.cpp.s
+.PHONY : myfiber/http/http11_parser.s
 
 # target to generate assembly for a file
-sylar/util.cpp.s:
-	$(MAKE) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cpp.s
-.PHONY : sylar/util.cpp.s
+myfiber/http/http11_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http11_parser.cpp.s
+.PHONY : myfiber/http/http11_parser.cpp.s
+
+myfiber/http/http_parser.o: myfiber/http/http_parser.cpp.o
+.PHONY : myfiber/http/http_parser.o
+
+# target to build an object file
+myfiber/http/http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http_parser.cpp.o
+.PHONY : myfiber/http/http_parser.cpp.o
+
+myfiber/http/http_parser.i: myfiber/http/http_parser.cpp.i
+.PHONY : myfiber/http/http_parser.i
+
+# target to preprocess a source file
+myfiber/http/http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http_parser.cpp.i
+.PHONY : myfiber/http/http_parser.cpp.i
+
+myfiber/http/http_parser.s: myfiber/http/http_parser.cpp.s
+.PHONY : myfiber/http/http_parser.s
+
+# target to generate assembly for a file
+myfiber/http/http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/http_parser.cpp.s
+.PHONY : myfiber/http/http_parser.cpp.s
+
+myfiber/http/httpclient_parser.o: myfiber/http/httpclient_parser.cpp.o
+.PHONY : myfiber/http/httpclient_parser.o
+
+# target to build an object file
+myfiber/http/httpclient_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/httpclient_parser.cpp.o
+.PHONY : myfiber/http/httpclient_parser.cpp.o
+
+myfiber/http/httpclient_parser.i: myfiber/http/httpclient_parser.cpp.i
+.PHONY : myfiber/http/httpclient_parser.i
+
+# target to preprocess a source file
+myfiber/http/httpclient_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/httpclient_parser.cpp.i
+.PHONY : myfiber/http/httpclient_parser.cpp.i
+
+myfiber/http/httpclient_parser.s: myfiber/http/httpclient_parser.cpp.s
+.PHONY : myfiber/http/httpclient_parser.s
+
+# target to generate assembly for a file
+myfiber/http/httpclient_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/http/httpclient_parser.cpp.s
+.PHONY : myfiber/http/httpclient_parser.cpp.s
+
+myfiber/iomanager.o: myfiber/iomanager.cpp.o
+.PHONY : myfiber/iomanager.o
+
+# target to build an object file
+myfiber/iomanager.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/iomanager.cpp.o
+.PHONY : myfiber/iomanager.cpp.o
+
+myfiber/iomanager.i: myfiber/iomanager.cpp.i
+.PHONY : myfiber/iomanager.i
+
+# target to preprocess a source file
+myfiber/iomanager.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/iomanager.cpp.i
+.PHONY : myfiber/iomanager.cpp.i
+
+myfiber/iomanager.s: myfiber/iomanager.cpp.s
+.PHONY : myfiber/iomanager.s
+
+# target to generate assembly for a file
+myfiber/iomanager.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/iomanager.cpp.s
+.PHONY : myfiber/iomanager.cpp.s
+
+myfiber/log.o: myfiber/log.cpp.o
+.PHONY : myfiber/log.o
+
+# target to build an object file
+myfiber/log.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/log.cpp.o
+.PHONY : myfiber/log.cpp.o
+
+myfiber/log.i: myfiber/log.cpp.i
+.PHONY : myfiber/log.i
+
+# target to preprocess a source file
+myfiber/log.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/log.cpp.i
+.PHONY : myfiber/log.cpp.i
+
+myfiber/log.s: myfiber/log.cpp.s
+.PHONY : myfiber/log.s
+
+# target to generate assembly for a file
+myfiber/log.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/log.cpp.s
+.PHONY : myfiber/log.cpp.s
+
+myfiber/scheduler.o: myfiber/scheduler.cpp.o
+.PHONY : myfiber/scheduler.o
+
+# target to build an object file
+myfiber/scheduler.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/scheduler.cpp.o
+.PHONY : myfiber/scheduler.cpp.o
+
+myfiber/scheduler.i: myfiber/scheduler.cpp.i
+.PHONY : myfiber/scheduler.i
+
+# target to preprocess a source file
+myfiber/scheduler.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/scheduler.cpp.i
+.PHONY : myfiber/scheduler.cpp.i
+
+myfiber/scheduler.s: myfiber/scheduler.cpp.s
+.PHONY : myfiber/scheduler.s
+
+# target to generate assembly for a file
+myfiber/scheduler.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/scheduler.cpp.s
+.PHONY : myfiber/scheduler.cpp.s
+
+myfiber/socket.o: myfiber/socket.cpp.o
+.PHONY : myfiber/socket.o
+
+# target to build an object file
+myfiber/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/socket.cpp.o
+.PHONY : myfiber/socket.cpp.o
+
+myfiber/socket.i: myfiber/socket.cpp.i
+.PHONY : myfiber/socket.i
+
+# target to preprocess a source file
+myfiber/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/socket.cpp.i
+.PHONY : myfiber/socket.cpp.i
+
+myfiber/socket.s: myfiber/socket.cpp.s
+.PHONY : myfiber/socket.s
+
+# target to generate assembly for a file
+myfiber/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/socket.cpp.s
+.PHONY : myfiber/socket.cpp.s
+
+myfiber/tcp_server.o: myfiber/tcp_server.cpp.o
+.PHONY : myfiber/tcp_server.o
+
+# target to build an object file
+myfiber/tcp_server.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/tcp_server.cpp.o
+.PHONY : myfiber/tcp_server.cpp.o
+
+myfiber/tcp_server.i: myfiber/tcp_server.cpp.i
+.PHONY : myfiber/tcp_server.i
+
+# target to preprocess a source file
+myfiber/tcp_server.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/tcp_server.cpp.i
+.PHONY : myfiber/tcp_server.cpp.i
+
+myfiber/tcp_server.s: myfiber/tcp_server.cpp.s
+.PHONY : myfiber/tcp_server.s
+
+# target to generate assembly for a file
+myfiber/tcp_server.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/tcp_server.cpp.s
+.PHONY : myfiber/tcp_server.cpp.s
+
+myfiber/thread.o: myfiber/thread.cpp.o
+.PHONY : myfiber/thread.o
+
+# target to build an object file
+myfiber/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/thread.cpp.o
+.PHONY : myfiber/thread.cpp.o
+
+myfiber/thread.i: myfiber/thread.cpp.i
+.PHONY : myfiber/thread.i
+
+# target to preprocess a source file
+myfiber/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/thread.cpp.i
+.PHONY : myfiber/thread.cpp.i
+
+myfiber/thread.s: myfiber/thread.cpp.s
+.PHONY : myfiber/thread.s
+
+# target to generate assembly for a file
+myfiber/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/thread.cpp.s
+.PHONY : myfiber/thread.cpp.s
+
+myfiber/timer.o: myfiber/timer.cpp.o
+.PHONY : myfiber/timer.o
+
+# target to build an object file
+myfiber/timer.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/timer.cpp.o
+.PHONY : myfiber/timer.cpp.o
+
+myfiber/timer.i: myfiber/timer.cpp.i
+.PHONY : myfiber/timer.i
+
+# target to preprocess a source file
+myfiber/timer.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/timer.cpp.i
+.PHONY : myfiber/timer.cpp.i
+
+myfiber/timer.s: myfiber/timer.cpp.s
+.PHONY : myfiber/timer.s
+
+# target to generate assembly for a file
+myfiber/timer.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/timer.cpp.s
+.PHONY : myfiber/timer.cpp.s
+
+myfiber/util.o: myfiber/util.cpp.o
+.PHONY : myfiber/util.o
+
+# target to build an object file
+myfiber/util.cpp.o:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/util.cpp.o
+.PHONY : myfiber/util.cpp.o
+
+myfiber/util.i: myfiber/util.cpp.i
+.PHONY : myfiber/util.i
+
+# target to preprocess a source file
+myfiber/util.cpp.i:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/util.cpp.i
+.PHONY : myfiber/util.cpp.i
+
+myfiber/util.s: myfiber/util.cpp.s
+.PHONY : myfiber/util.s
+
+# target to generate assembly for a file
+myfiber/util.cpp.s:
+	$(MAKE) -f CMakeFiles/myfiber.dir/build.make CMakeFiles/myfiber.dir/myfiber/util.cpp.s
+.PHONY : myfiber/util.cpp.s
 
 tests/test.o: tests/test.cpp.o
 .PHONY : tests/test.o
@@ -399,6 +704,30 @@ tests/test.s: tests/test.cpp.s
 tests/test.cpp.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cpp.s
 .PHONY : tests/test.cpp.s
+
+tests/test_address.o: tests/test_address.cpp.o
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cpp.o:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.o
+.PHONY : tests/test_address.cpp.o
+
+tests/test_address.i: tests/test_address.cpp.i
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cpp.i:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.i
+.PHONY : tests/test_address.cpp.i
+
+tests/test_address.s: tests/test_address.cpp.s
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cpp.s:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cpp.s
+.PHONY : tests/test_address.cpp.s
 
 tests/test_config.o: tests/test_config.cpp.o
 .PHONY : tests/test_config.o
@@ -448,6 +777,54 @@ tests/test_fiber.cpp.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cpp.s
 .PHONY : tests/test_fiber.cpp.s
 
+tests/test_hook.o: tests/test_hook.cpp.o
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cpp.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.o
+.PHONY : tests/test_hook.cpp.o
+
+tests/test_hook.i: tests/test_hook.cpp.i
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cpp.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.i
+.PHONY : tests/test_hook.cpp.i
+
+tests/test_hook.s: tests/test_hook.cpp.s
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cpp.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cpp.s
+.PHONY : tests/test_hook.cpp.s
+
+tests/test_http_parser.o: tests/test_http_parser.cpp.o
+.PHONY : tests/test_http_parser.o
+
+# target to build an object file
+tests/test_http_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.o
+.PHONY : tests/test_http_parser.cpp.o
+
+tests/test_http_parser.i: tests/test_http_parser.cpp.i
+.PHONY : tests/test_http_parser.i
+
+# target to preprocess a source file
+tests/test_http_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.i
+.PHONY : tests/test_http_parser.cpp.i
+
+tests/test_http_parser.s: tests/test_http_parser.cpp.s
+.PHONY : tests/test_http_parser.s
+
+# target to generate assembly for a file
+tests/test_http_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cpp.s
+.PHONY : tests/test_http_parser.cpp.s
+
 tests/test_iomanager.o: tests/test_iomanager.cpp.o
 .PHONY : tests/test_iomanager.o
 
@@ -495,6 +872,54 @@ tests/test_scheduler.s: tests/test_scheduler.cpp.s
 tests/test_scheduler.cpp.s:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s
 .PHONY : tests/test_scheduler.cpp.s
+
+tests/test_socket.o: tests/test_socket.cpp.o
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cpp.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.o
+.PHONY : tests/test_socket.cpp.o
+
+tests/test_socket.i: tests/test_socket.cpp.i
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cpp.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.i
+.PHONY : tests/test_socket.cpp.i
+
+tests/test_socket.s: tests/test_socket.cpp.s
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cpp.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cpp.s
+.PHONY : tests/test_socket.cpp.s
+
+tests/test_tcp_server.o: tests/test_tcp_server.cpp.o
+.PHONY : tests/test_tcp_server.o
+
+# target to build an object file
+tests/test_tcp_server.cpp.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cpp.o
+.PHONY : tests/test_tcp_server.cpp.o
+
+tests/test_tcp_server.i: tests/test_tcp_server.cpp.i
+.PHONY : tests/test_tcp_server.i
+
+# target to preprocess a source file
+tests/test_tcp_server.cpp.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cpp.i
+.PHONY : tests/test_tcp_server.cpp.i
+
+tests/test_tcp_server.s: tests/test_tcp_server.cpp.s
+.PHONY : tests/test_tcp_server.s
+
+# target to generate assembly for a file
+tests/test_tcp_server.cpp.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cpp.s
+.PHONY : tests/test_tcp_server.cpp.s
 
 tests/test_thread.o: tests/test_thread.cpp.o
 .PHONY : tests/test_thread.o
@@ -552,50 +977,100 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sylar"
+	@echo "... myfiber"
 	@echo "... test"
+	@echo "... test_address"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_hook"
+	@echo "... test_http_parser"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
+	@echo "... test_socket"
+	@echo "... test_tcp_server"
 	@echo "... test_thread"
 	@echo "... test_util"
-	@echo "... sylar/config.o"
-	@echo "... sylar/config.i"
-	@echo "... sylar/config.s"
-	@echo "... sylar/fiber.o"
-	@echo "... sylar/fiber.i"
-	@echo "... sylar/fiber.s"
-	@echo "... sylar/iomanager.o"
-	@echo "... sylar/iomanager.i"
-	@echo "... sylar/iomanager.s"
-	@echo "... sylar/log.o"
-	@echo "... sylar/log.i"
-	@echo "... sylar/log.s"
-	@echo "... sylar/scheduler.o"
-	@echo "... sylar/scheduler.i"
-	@echo "... sylar/scheduler.s"
-	@echo "... sylar/thread.o"
-	@echo "... sylar/thread.i"
-	@echo "... sylar/thread.s"
-	@echo "... sylar/util.o"
-	@echo "... sylar/util.i"
-	@echo "... sylar/util.s"
+	@echo "... myfiber/address.o"
+	@echo "... myfiber/address.i"
+	@echo "... myfiber/address.s"
+	@echo "... myfiber/config.o"
+	@echo "... myfiber/config.i"
+	@echo "... myfiber/config.s"
+	@echo "... myfiber/fd_manager.o"
+	@echo "... myfiber/fd_manager.i"
+	@echo "... myfiber/fd_manager.s"
+	@echo "... myfiber/fiber.o"
+	@echo "... myfiber/fiber.i"
+	@echo "... myfiber/fiber.s"
+	@echo "... myfiber/hook.o"
+	@echo "... myfiber/hook.i"
+	@echo "... myfiber/hook.s"
+	@echo "... myfiber/http/http.o"
+	@echo "... myfiber/http/http.i"
+	@echo "... myfiber/http/http.s"
+	@echo "... myfiber/http/http11_parser.o"
+	@echo "... myfiber/http/http11_parser.i"
+	@echo "... myfiber/http/http11_parser.s"
+	@echo "... myfiber/http/http_parser.o"
+	@echo "... myfiber/http/http_parser.i"
+	@echo "... myfiber/http/http_parser.s"
+	@echo "... myfiber/http/httpclient_parser.o"
+	@echo "... myfiber/http/httpclient_parser.i"
+	@echo "... myfiber/http/httpclient_parser.s"
+	@echo "... myfiber/iomanager.o"
+	@echo "... myfiber/iomanager.i"
+	@echo "... myfiber/iomanager.s"
+	@echo "... myfiber/log.o"
+	@echo "... myfiber/log.i"
+	@echo "... myfiber/log.s"
+	@echo "... myfiber/scheduler.o"
+	@echo "... myfiber/scheduler.i"
+	@echo "... myfiber/scheduler.s"
+	@echo "... myfiber/socket.o"
+	@echo "... myfiber/socket.i"
+	@echo "... myfiber/socket.s"
+	@echo "... myfiber/tcp_server.o"
+	@echo "... myfiber/tcp_server.i"
+	@echo "... myfiber/tcp_server.s"
+	@echo "... myfiber/thread.o"
+	@echo "... myfiber/thread.i"
+	@echo "... myfiber/thread.s"
+	@echo "... myfiber/timer.o"
+	@echo "... myfiber/timer.i"
+	@echo "... myfiber/timer.s"
+	@echo "... myfiber/util.o"
+	@echo "... myfiber/util.i"
+	@echo "... myfiber/util.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http_parser.o"
+	@echo "... tests/test_http_parser.i"
+	@echo "... tests/test_http_parser.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
+	@echo "... tests/test_tcp_server.o"
+	@echo "... tests/test_tcp_server.i"
+	@echo "... tests/test_tcp_server.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

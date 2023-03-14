@@ -3,13 +3,14 @@
 
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/test_util.dir/tests/test_util.cpp.o: tests/test_util.cpp
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/config.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/fiber.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/log.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/macro.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/scheduler.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/singleton.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/sylar.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/thread.h
-CMakeFiles/test_util.dir/tests/test_util.cpp.o: sylar/util.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/config.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/fiber.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/log.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/noncopyable.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/scheduler.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/singleton.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/myfiber.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/thread.h
+CMakeFiles/test_util.dir/tests/test_util.cpp.o: myfiber/util.h
 

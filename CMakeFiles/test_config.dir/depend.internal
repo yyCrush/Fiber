@@ -3,9 +3,10 @@
 
 CMakeFiles/test_config.dir/tests/test_config.cpp.o
  /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
- /home/zyy/workspace/sylar/sylar/config.h
- /home/zyy/workspace/sylar/sylar/log.h
- /home/zyy/workspace/sylar/sylar/singleton.h
- /home/zyy/workspace/sylar/sylar/thread.h
- /home/zyy/workspace/sylar/sylar/util.h
- /home/zyy/workspace/sylar/tests/test_config.cpp
+ /home/zyy/workspace/myfiber/myfiber/config.h
+ /home/zyy/workspace/myfiber/myfiber/log.h
+ /home/zyy/workspace/myfiber/myfiber/noncopyable.h
+ /home/zyy/workspace/myfiber/myfiber/singleton.h
+ /home/zyy/workspace/myfiber/myfiber/thread.h
+ /home/zyy/workspace/myfiber/myfiber/util.h
+ /home/zyy/workspace/myfiber/tests/test_config.cpp

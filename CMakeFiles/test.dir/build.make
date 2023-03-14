@@ -41,10 +41,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zyy/workspace/sylar
+CMAKE_SOURCE_DIR = /home/zyy/workspace/myfiber
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zyy/workspace/sylar
+CMAKE_BINARY_DIR = /home/zyy/workspace/myfiber
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -57,17 +57,17 @@ include CMakeFiles/test.dir/flags.make
 
 CMakeFiles/test.dir/tests/test.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/tests/test.cpp.o: tests/test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zyy/workspace/sylar/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zyy/workspace/myfiber/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/tests/test.cpp.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/tests/test.cpp.o -c /home/zyy/workspace/sylar/tests/test.cpp
+	/opt/rh/devtoolset-8/root/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/tests/test.cpp.o -c /home/zyy/workspace/myfiber/tests/test.cpp
 
 CMakeFiles/test.dir/tests/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/test.cpp.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zyy/workspace/sylar/tests/test.cpp > CMakeFiles/test.dir/tests/test.cpp.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zyy/workspace/myfiber/tests/test.cpp > CMakeFiles/test.dir/tests/test.cpp.i
 
 CMakeFiles/test.dir/tests/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/test.cpp.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zyy/workspace/sylar/tests/test.cpp -o CMakeFiles/test.dir/tests/test.cpp.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zyy/workspace/myfiber/tests/test.cpp -o CMakeFiles/test.dir/tests/test.cpp.s
 
 CMakeFiles/test.dir/tests/test.cpp.o.requires:
 .PHONY : CMakeFiles/test.dir/tests/test.cpp.o.requires
@@ -87,8 +87,8 @@ test_EXTERNAL_OBJECTS =
 
 bin/test: CMakeFiles/test.dir/tests/test.cpp.o
 bin/test: CMakeFiles/test.dir/build.make
-bin/test: lib/libsylar.so
-bin/test: lib/libsylar.so
+bin/test: lib/libmyfiber.so
+bin/test: lib/libmyfiber.so
 bin/test: /usr/local/lib64/libyaml-cpp.a
 bin/test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/test"
@@ -106,6 +106,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/zyy/workspace/sylar && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zyy/workspace/myfiber && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

@@ -27,16 +27,16 @@ system:
         k3: 10
 class:
     person:
-        name: sylar
+        name: myfiber
         age: 31
         sex: true
     map:
-        sylar1:
-            name: sylar01
+        myfiber1:
+            name: myfiber01
             age: 18
             sex: false
-        sylar2:
-            name: sylar01
+        myfiber2:
+            name: myfiber01
             age: 40
             sex: true
     vec_map:

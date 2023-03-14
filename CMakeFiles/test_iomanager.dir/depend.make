@@ -3,14 +3,16 @@
 
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: tests/test_iomanager.cpp
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/config.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/fiber.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/iomanager.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/log.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/macro.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/scheduler.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/singleton.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/sylar.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/thread.h
-CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: sylar/util.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/config.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/fiber.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/iomanager.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/log.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/macro.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/noncopyable.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/scheduler.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/singleton.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/myfiber.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/thread.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/timer.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cpp.o: myfiber/util.h
 

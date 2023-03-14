@@ -41,10 +41,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zyy/workspace/sylar
+CMAKE_SOURCE_DIR = /home/zyy/workspace/myfiber
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zyy/workspace/sylar
+CMAKE_BINARY_DIR = /home/zyy/workspace/myfiber
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_scheduler.dir/depend.make
@@ -57,17 +57,17 @@ include CMakeFiles/test_scheduler.dir/flags.make
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: CMakeFiles/test_scheduler.dir/flags.make
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o: tests/test_scheduler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/zyy/workspace/sylar/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/zyy/workspace/myfiber/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o -c /home/zyy/workspace/sylar/tests/test_scheduler.cpp
+	/opt/rh/devtoolset-8/root/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o -c /home/zyy/workspace/myfiber/tests/test_scheduler.cpp
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zyy/workspace/sylar/tests/test_scheduler.cpp > CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/zyy/workspace/myfiber/tests/test_scheduler.cpp > CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.i
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zyy/workspace/sylar/tests/test_scheduler.cpp -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/zyy/workspace/myfiber/tests/test_scheduler.cpp -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.s
 
 CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o.requires:
 .PHONY : CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o.requires
@@ -87,8 +87,8 @@ test_scheduler_EXTERNAL_OBJECTS =
 
 bin/test_scheduler: CMakeFiles/test_scheduler.dir/tests/test_scheduler.cpp.o
 bin/test_scheduler: CMakeFiles/test_scheduler.dir/build.make
-bin/test_scheduler: lib/libsylar.so
-bin/test_scheduler: lib/libsylar.so
+bin/test_scheduler: lib/libmyfiber.so
+bin/test_scheduler: lib/libmyfiber.so
 bin/test_scheduler: /usr/local/lib64/libyaml-cpp.a
 bin/test_scheduler: CMakeFiles/test_scheduler.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/test_scheduler"
@@ -106,6 +106,6 @@ CMakeFiles/test_scheduler.dir/clean:
 .PHONY : CMakeFiles/test_scheduler.dir/clean
 
 CMakeFiles/test_scheduler.dir/depend:
-	cd /home/zyy/workspace/sylar && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar /home/zyy/workspace/sylar/CMakeFiles/test_scheduler.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zyy/workspace/myfiber && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber /home/zyy/workspace/myfiber/CMakeFiles/test_scheduler.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test_scheduler.dir/depend
 

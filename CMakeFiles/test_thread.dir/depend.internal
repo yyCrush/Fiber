@@ -3,13 +3,14 @@
 
 CMakeFiles/test_thread.dir/tests/test_thread.cpp.o
  /home/zyy/package/yaml-cpp-master/include/yaml-cpp/yaml.h
- /home/zyy/workspace/sylar/tests/test_thread.cpp
- sylar/config.h
- sylar/fiber.h
- sylar/log.h
- sylar/macro.h
- sylar/scheduler.h
- sylar/singleton.h
- sylar/sylar.h
- sylar/thread.h
- sylar/util.h
+ /home/zyy/workspace/myfiber/tests/test_thread.cpp
+ myfiber/config.h
+ myfiber/fiber.h
+ myfiber/log.h
+ myfiber/macro.h
+ myfiber/noncopyable.h
+ myfiber/scheduler.h
+ myfiber/singleton.h
+ myfiber/myfiber.h
+ myfiber/thread.h
+ myfiber/util.h

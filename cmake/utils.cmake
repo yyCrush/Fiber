@@ -61,7 +61,7 @@ function(protobufmaker src_proto outputlist outputdir)
 endfunction(protobufmaker)
 
 
-function(sylar_add_executable targetname srcs depends libs)
+function(myfiber_add_executable targetname srcs depends libs)
     add_executable(${targetname} ${srcs})
     add_dependencies(${targetname} ${depends})
     force_redefine_file_macro_for_sources(${targetname})

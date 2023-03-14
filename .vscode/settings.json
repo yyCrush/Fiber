@@ -57,6 +57,9 @@
         "valarray": "cpp",
         "chrono": "cpp",
         "ratio": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "bitset": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp"
     }
 }
